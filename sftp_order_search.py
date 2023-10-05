@@ -43,7 +43,7 @@ try:
                 logging.info(f"Found matching file {filename} for order number {order_number}.")
 
                 # Download the file
-                local_file_path = os.path.join('C:\\tmp\\spencersMissingASNs\\', filename)
+                local_file_path = os.path.join('\local\folder\path', filename)
                 sftp.get(remote_paths[order_number], local_file_path)
                 logging.info(f"Downloaded {filename} to {local_file_path}.")
 except Exception as e:
@@ -56,7 +56,7 @@ logging.info("SFTP connection closed.")
 
 # Update the CSV file with the remote paths
 try:
-    with open('venv\\missingASN\\missingASNs.csv', 'w', newline='') as f:
+    with open('result.csv', 'w', newline='') as f:
         writer = csv.writer(f)
         writer.writerow(headers + ['RemotePath'])  # write new header
         for order_number, remote_path in remote_paths.items():
