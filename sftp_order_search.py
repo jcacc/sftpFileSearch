@@ -4,7 +4,7 @@ import os
 import logging
 
 # Setup logging
-logging.basicConfig(filename='C:\\tmp\\spencersMissingASNs\\sftp_search.log', level=logging.INFO)
+logging.basicConfig(filename='sftp_search.log', level=logging.INFO)
 
 # Initialize a dictionary to store the remote paths for each order number
 remote_paths = {}
