@@ -22,7 +22,6 @@ except Exception as e:
     logging.exception("An error occurred while reading the CSV file.")
 
 # Connect to the SFTP server
-# Connect to the SFTP server
 try:
     transport = paramiko.Transport(('sftp.foo.bar', 22))
     transport.connect(username='user', password='password')
